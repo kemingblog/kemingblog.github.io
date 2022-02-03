@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "Greycliff CF";
+  src: url("https://kemingblog.github.io/fonts/greycliff-extrabold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Mongolian Baiti";
+  src: url("https://kemingblog.github.io/fonts/monbaiti.ttf");
+}
+
+:root {
+  /* COLORS */
+  --brand-primary: #35AF50;
+  /* THEMES */
+  --primary-night: #11111F;
+  --primary-light: white;
+  /* FONTS */
+  --text-display: Greycliff CF;
+  --text-normal: Mongolian Baiti;
+  --text-code: monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.rn {
+  color: var(--brand-primary);
+  font-size: 52px;
+  letter-spacing: 2px;
+  font-family: var(--text-normal);
+  font-weight: normal;
+}
+
+.r-logo {
+  letter-spacing: -4px;
+}
+
+.navigation {
+  height: 80px;
+  background-image: url("https://kemingblog.github.io/images/background.png");
+  background-color: var(--primary-night);
+}
+
+.navigation-content h1 {
+  margin-top: 10px;
+  color: var(--primary-light);
+}
+
+.navigation-content, .navigation-links {
+  display: flex;
+}
+
+.navigation-links {
+  margin-top: 22px;
+  position: absolute;
+  right: 0;
+}
+
+.navigation-link {
+  margin-right: 20px;
+}
+
+.navigation-link a {
+  text-decoration: none;
+  color: var(--primary-light);
+  transition: color 400ms;
+}
+
+.navigation-link a:hover {
+  color: var(--brand-primary);
+}
+
+.navigation-links:last-child {
+  margin-right: 50px;
+}
+
+#logo-fade {
+  opacity: 0;
+  transition: opacity 400ms, margin-left 1s ease-out;
+}
+
+#logo-spacing {
+  opacity: 0;
+  letter-spacing: 3px;
+  transition: opacity 200ms, letter-spacing 500ms;
+}
+
+.title-divider {
+  width: 100px;
+  height: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: var(--primary-night);
+}
+
+.title-author {
+  display: flex;
+}
+
+.title-author img {
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.content {
+  margin-top: 100px;
+  margin-left: 100px;
+}
+
+.article {
+  width: 800px;
+  margin-top: 30px;
+}
+
+.article p {
+  text-align: justify;
+}
+
+.article p:first-child:first-letter {
+  float: left;
+  line-height: 1;
+  font-size: 80px;
+  padding-right: 10px;
+  font-family: var(--text-display);
+}
+
+.divider {
+  height: 1px;
+  width: 800px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  background: #DBDBDB;
+}
+
+.hero {
+  height: 650px;
+  background: url("https://kemingblog.github.io/images/background-green.png");
+  background-color: var(--brand-primary);
+  background-size: 60%;
+}
+
+.hero-content {
+  padding-top: 200px;
+  padding-left: 75px;
+}
+
+.about {
+  height: 650px;
+  background: url("https://kemingblog.github.io/images/background.png");
+  background-color: var(--brand-primary);
+  background-size: 60%;
+}
+
+.about-content {
+  padding-top: 150px;
+}
+
+.about-content h1,
+.about-content p {
+  color: var(--primary-light);
+}
+
+.monthly-font {
+  height: 650px;
+  background-color: var(--brand-primary);
+  background-size: 60%;
+}
+
+.monthly-content {
+  padding-top: 200px;
+  padding-left: 75px;
+}
+
+.button-filled {
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  color: var(--primary-light);
+  font-family: var(--text-display);
+  background: var(--brand-primary);
+  border: solid 3px var(--primary-night);
+  transition: opacity 400ms;
+}
+
+.button-filled:hover {
+  opacity: 0.7;
+}
+
+.button-hollow {
+  outline: none;
+  cursor: pointer;
+  font-size: 24px;
+  padding: 15px 25px;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--brand-primary);
+  font-family: var(--text-display);
+  border: solid 3px var(--brand-primary);
+  transition: background 400ms, color 400ms;
+}
+
+.button-hollow:hover {
+  color: var(--primary-light);
+  background: var(--brand-primary);
+}
+
+.button-filled.filled-black {
+  color: var(--primary-light);
+  background: var(--primary-night);
+  border: solid 3px var(--primary-night);
+}
+
+.button-hollow.outlined-white {
+  color: var(--primary-light);
+  font-family: var(--text-display);
+  border: solid 3px var(--primary-light);
+}
+
+.button-hollow.outlined-white:hover {
+  color: var(--brand-primary);
+  background: var(--primary-light);
+}
+
+.monthly-background {
+  opacity: 0.07;
+}
+
+.footer {
+  padding: 30px;
+  background: var(--primary-night);
+}
+
+.article-post {
+  padding: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: background 400ms, border-radius 400ms;
+}
+
+.article-post:hover {
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.075);
+}
+
+.scroll-div {
+  width: 100%;
+  height: 5px;
+  background: #DBDBDB;
+}
+
+.scroll {
+  width: 0%;
+  height: 5px;
+  background: var(--brand-primary);
+}
+
+#progress {
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+
+/* TAGS */
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+h1 {
+  width: 700px;
+  color: var(--primary-night);
+  font-family: var(--text-display);
+  font-size: 48px;
+}
+
+h2 {
+  width: 500px;
+  color: var(--brand-primary);
+  font-family: var(--text-display);
+  font-size: 36px;
+}
+
+p, a {
+  color: var(--primary-night);
+  font-family: var(--text-normal);
+  font-size: 24px;
+}
+
+a {
+  color: var(--brand-primary);
+}
+
+button {
+  margin-right: 10px;
+}
+
+img {
+  border-radius: 5px;
+}
